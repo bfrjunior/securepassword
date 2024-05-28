@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class ApiController {
 
     @PostMapping(name = "/validate-password")
-    public ResponseEntity<?> validatePassword() {
+    public ResponseEntity<FailureResponse> validatePassword(@RequestBody BodyResquest request) {
 
         return ResponseEntity.noContent().build();
     }
