@@ -17,7 +17,7 @@ public class ApiController {
         this.passwordService = passwordService;
     }
 
-    @PostMapping(name = "/validate-password")
+    @PostMapping(value = "/validate-password")
     public ResponseEntity<FailureResponse> validatePassword(@RequestBody BodyResquest request) {
 
         var failures = passwordService.validatePass(request.password());
